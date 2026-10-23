@@ -378,7 +378,7 @@ section.block{padding-block:72px}
 
 /* ---------- responsive base ---------- */
 @media (max-width:1000px){.doors{grid-template-columns:repeat(2,minmax(0,1fr))}.now{grid-template-columns:repeat(2,minmax(0,1fr))}.now div:nth-child(3){padding-left:0;border-left:0}.now div:nth-child(-n+2){border-bottom:1px solid var(--rule)}}
-@media (max-width:900px){.hero-grid,.story-head{grid-template-columns:1fr}.portrait{justify-self:center;max-width:220px}}
+@media (max-width:900px){.hero-grid,.story-head{grid-template-columns:1fr}.portrait{justify-self:center;max-width:clamp(220px,40vw,320px)}}
 @media (max-width:560px){
   body{font-size:18px}
   .doors{grid-template-columns:1fr}.door{min-height:0}
