@@ -46,7 +46,7 @@ FOOTER = '''<footer class="contact" id="contact"><div class="wrap">
 </ul>
 <div class="foot"><span>Suraj Shaw · London · Four worlds, one person.</span>
 <nav aria-label="Worlds"><a href="guardian.html">Guardian</a><a href="builder.html">Builder</a><a href="researcher.html">Researcher</a><a href="human.html">Human</a></nav>
-<span>Built by hand. No trackers.</span></div>
+<span>Made with <a href="https://claude.ai">Claude</a>. Experiments at <a href="https://www.shawlabs.dev" rel="me">shawlabs.dev ↗</a></span></div>
 </div></footer>'''
 
 LD = {"@context": "https://schema.org", "@type": "Person", "name": "Suraj Shaw", "alternateName": "Shaw", "url": "https://www.shawsuraj.com",
