@@ -25,6 +25,7 @@ def nav(current):
         cur = ' aria-current="page"' if slug == current else ""
         dot = f'<i style="background:var(--{DOTS[slug]})"></i>' if slug in DOTS else ""
         items.append(f'<a href="{slug}.html"{cur}>{dot}{name}</a>')
+    items.append('<a href="https://www.shawlabs.dev" rel="me">Lab ↗</a>')
     items.append('<a class="cta" href="#contact">Contact</a>')
     return ('<a class="skip" href="#main">Skip to content</a>\n<header class="top"><div class="wrap">'
             '<a class="mark" href="index.html" aria-label="Suraj Shaw, home">shaw <span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span></a>'
@@ -37,6 +38,7 @@ FOOTER = '''<footer class="contact" id="contact"><div class="wrap">
 <div class="mailrow"><a class="mail" id="mail" href="mailto:shaw@shawsuraj.com">shaw@shawsuraj.com</a><button class="copy" id="copy" type="button">Copy</button></div>
 <ul class="elsewhere">
 <li><a href="https://www.linkedin.com/in/shawsuraj/" target="_blank" rel="noopener me"><b>LinkedIn</b><span>in/shawsuraj</span></a></li>
+<li><a href="https://www.shawlabs.dev" rel="me"><b>Shaw Labs</b><span>shawlabs.dev</span></a></li>
 <li><a href="https://github.com/shawsuraj" target="_blank" rel="noopener me"><b>GitHub</b><span>shawsuraj</span></a></li>
 <li><a href="https://orcid.org/0009-0002-4482-8013" target="_blank" rel="noopener me"><b>ORCID</b><span>0009-0002-4482-8013</span></a></li>
 <li><a href="https://www.instagram.com/shawsuraj/" target="_blank" rel="noopener me"><b>Instagram</b><span>@shawsuraj</span></a></li>
@@ -52,7 +54,7 @@ LD = {"@context": "https://schema.org", "@type": "Person", "name": "Suraj Shaw",
       "address": {"@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB"},
       "alumniOf": [{"@type": "CollegeOrUniversity", "name": "University of Westminster"}, {"@type": "CollegeOrUniversity", "name": "Brunel University London"}],
       "sameAs": ["https://www.linkedin.com/in/shawsuraj/", "https://github.com/shawsuraj", "https://orcid.org/0009-0002-4482-8013",
-                 "https://www.instagram.com/shawsuraj/", "https://twitter.com/shawsurajss", "https://worldchaosmap.app"]}
+                 "https://www.instagram.com/shawsuraj/", "https://twitter.com/shawsurajss", "https://worldchaosmap.app", "https://www.shawlabs.dev"]}
 
 def head(meta, slug, full):
     url = "https://www.shawsuraj.com/" + ("" if slug == "index" else slug)
