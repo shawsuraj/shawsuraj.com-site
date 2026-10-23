@@ -1,0 +1,68 @@
+{
+  "outputDirectory": "dist",
+  "buildCommand": "",
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/cv/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/cv",
+      "destination": "/cv/Suraj-Shaw-CV-Tech.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/bar",
+      "destination": "/human",
+      "permanent": false
+    },
+    {
+      "source": "/tech",
+      "destination": "/guardian",
+      "permanent": false
+    },
+    {
+      "source": "/research",
+      "destination": "/researcher",
+      "permanent": false
+    }
+  ]
+}
