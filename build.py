@@ -61,7 +61,7 @@ def head(meta, slug, full):
     if full:
         h += [f'<link rel="canonical" href="{url}">', '<meta property="og:type" content="profile">',
               f'<meta property="og:title" content="{meta["title"]}">', f'<meta property="og:description" content="{meta["desc"]}">',
-              f'<meta property="og:url" content="{url}">', '<meta property="og:image" content="https://shawsuraj.com/assets/og.jpg">',
+              f'<meta property="og:url" content="{url}">', '<meta property="og:image" content="https://shawsuraj.com/assets/og.jpg">', '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">', '<meta property="og:image:alt" content="Suraj Shaw. I build systems by day and make drinks by night.">',
               '<meta name="twitter:card" content="summary_large_image">', '<meta name="twitter:site" content="@shawsurajss">',
               '<meta name="theme-color" content="#eceee9" media="(prefers-color-scheme: light)">',
               '<meta name="theme-color" content="#0f1322" media="(prefers-color-scheme: dark)">']
