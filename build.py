@@ -76,6 +76,9 @@ def page(slug, full):
     meta = json.loads(first)
     content = f'{nav(slug)}\n<main id="main">\n{body}\n</main>\n{FOOTER}\n{GSAP}\n<script>{JS}</script>'
     if full:
+        # clean URLs for the live site: index.html -> /, guardian.html -> /guardian
+        content = re.sub(r'href="index\.html(#[^"]*)?"', lambda m: f'href="/{m.group(1) or ""}"', content)
+        content = re.sub(r'href="(guardian|builder|researcher|human)\.html(#[^"]*)?"', lambda m: f'href="/{m.group(1)}{m.group(2) or ""}"', content)
         return (f'<!doctype html>\n<html lang="en-GB">\n<head>\n<meta charset="utf-8">\n'
                 f'<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n{head(meta, slug, True)}\n</head>\n'
                 f'<body class="{meta["body"]}">\n<script>document.body.className="{meta["body"]}";</script>\n{content}\n</body>\n</html>\n')
